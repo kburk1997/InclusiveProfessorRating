@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 import { Professor } from '../professor';
 import { DatabaseService } from '../../services/database.service';

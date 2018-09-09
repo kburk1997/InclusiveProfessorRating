@@ -8,7 +8,7 @@
     <th>Number of Ratings</th>
   </tr>
   <tr *ngFor="let professor of professors">
-    <td>{{professor.name}}</td>
+    <td><a routerLink="/professor/{{professor.id}}">{{professor.name}}</a></td>
     <td>{{deptNames[professor.id]}}</td>
     <td>{{professor.overallRating}}</td>
     <td>{{professor.numRatings}}</td>
