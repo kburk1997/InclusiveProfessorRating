@@ -18,11 +18,18 @@ export class ProfessorViewComponent implements OnInit {
   university: University;
   reviews: Review[];
 
+  newRating: boolean;
+
   constructor(private route: ActivatedRoute,
     private dbService: DatabaseService) { }
 
   ngOnInit() {
+    let newRating = false;
     this.getProfessor();
+  }
+
+  toggleNewRating(): void{
+    this.newRating = !this.newRating;
   }
 
     getProfessor(): void {

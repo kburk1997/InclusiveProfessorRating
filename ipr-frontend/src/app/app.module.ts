@@ -15,6 +15,8 @@ import { AboutPageComponent } from './static-pages/about-page/about-page.compone
 import { AppRoutingModule } from './/app-routing.module';
 import { DatabaseService } from './services/database.service';
 import { FakeDatabaseService } from './services/fake-database.service';
+import { ReviewFormComponent } from './review/review-form/review-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { FakeDatabaseService } from './services/fake-database.service';
     FlagComponent,
     NavbarComponent,
     WelcomePageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ReviewFormComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [{provide: DatabaseService,
       useClass: FakeDatabaseService}],

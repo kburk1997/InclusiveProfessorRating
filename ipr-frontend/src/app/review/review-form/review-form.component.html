@@ -1,0 +1,36 @@
+<div class="form-group">
+    <label for="courseNum"><b>Course Taken</b></label>
+  <input id="courseNum"  type="text" class="form-control mx-sm-3" [(ngModel)]="review.courseTaken" placeholder="Course #" aria-label="Course Number" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <label for="qualityRating"><b>Quality </b></label>
+  <ngb-rating id="qualityRating" max="5" [(ngModel)]="review.qualityRating"></ngb-rating>
+</div>
+
+<div class="input-group mb-3">
+  <label for="accomRating"><b>Accommodations </b></label>
+  <ngb-rating id="accomRating" max="5" [(ngModel)]="review.accomRating"></ngb-rating>
+</div>
+
+<div class="input-group mb-3">
+  <label for="inclusiveRating"><b>Inclusivity </b></label>
+  <ngb-rating id="inclusiveRating" max="5" [(ngModel)]="review.inclusiveRating"></ngb-rating>
+</div>
+<label for="redFlagList"><b>Red Flags </b> </label>
+<div id="redFlagList" *ngFor="let flag of redFlags" class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">{{flag.name}}</label>
+</div>
+<br>
+<label for="greenFlagList"><b>Green Flags </b></label>
+<div id="greenFlagList" *ngFor="let flag of greenFlags" class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">{{flag.name}}</label>
+</div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1"><b>Comment </b></label>
+    <textarea [(ngModel)]="review.text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+<button (click)="submit()">Submit</button>

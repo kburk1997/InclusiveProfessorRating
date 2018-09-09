@@ -38,4 +38,15 @@ export class FakeDatabaseService {
     return of(UNIVERSITIES);
   }
 
+  getRedFlags(): Observable<Flag[]>{
+    return of(FLAGS.filter(flag=> flag.red === true));
+  }
+
+  getGreenFlags(): Observable<Flag[]>{
+    return of(FLAGS.filter(flag=> flag.red === false));
+  }
+
+  addReview(review: Review): void{
+    REVIEWS.push(review);
+  }
 }
