@@ -24,7 +24,7 @@ export const PROFESSORS: Professor[] = [
   {id: 3, departmentId: 1, universityId: 0, name: "Hubert Farnsworth", overallRating: 3.14, numRatings: 1}
 ];
 
-export let REVIEWS: Review[] = [
+export const REVIEWS: Review[] = [
   {id: 0, professorId: 0, text: "Professor Tables is excellent! I do wish he didn't make that off-color joke in class that one time, though.", accomRating:4, inclusiveRating: 4, qualityRating:5,
   redFlags: [], greenFlags: [], upvotes:0, downvotes: 0, courseTaken: "CSCI4380" },
   {id: 1, professorId: 1, text: "Professor Benson's extensive experience in the field and her compassion for people make her an outstanding professor. I would definitely take her course again!",

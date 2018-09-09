@@ -17,6 +17,10 @@ import { DatabaseService } from './services/database.service';
 import { FakeDatabaseService } from './services/fake-database.service';
 import { ReviewFormComponent } from './review/review-form/review-form.component';
 import { FormsModule } from '@angular/forms';
+import { InMemoryDataService }  from './services/in-memory-review-api.service';
+import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +40,15 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     NgbModule.forRoot(),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+
+// The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+// and returns simulated server responses.
+// Remove it when a real server is ready to receive requests.
+HttpClientInMemoryWebApiModule.forRoot(
+  InMemoryDataService, { dataEncapsulation: false }
+)
   ],
   providers: [{provide: DatabaseService,
       useClass: FakeDatabaseService}],

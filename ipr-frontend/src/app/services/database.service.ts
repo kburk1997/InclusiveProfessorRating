@@ -18,5 +18,5 @@ export abstract class DatabaseService {
   abstract getUniversities(): Observable<University[]>;
   abstract getRedFlags(): Observable<Flag[]>;
   abstract getGreenFlags(): Observable<Flag[]>;
-  abstract addReview(review: Review): void;
+  abstract addReview(review: Review): Observable<any>;
 }
