@@ -1,3 +1,7 @@
-<p>
-  review works!
-</p>
+<p><b>Course:</b> {{review.courseTaken}}</p>
+<p><b>Quality:</b> {{review.qualityRating}}/5</p>
+<p><b>Accomodations:</b> {{review.accomRating}}/5</p>
+<p><b>Inclusivity:</b> {{review.inclusiveRating}}/5</p>
+<p><b>Red Flags: </b></p> <app-flag-list [flags]="review.redFlags"></app-flag-list>
+<p><b>Green Flags: </b> <span *ngIf="review.greenFlags.length ==0">None</span> </p> <app-flag-list [flags]="review.greenFlags"></app-flag-list>
+<p><b>Comment: </b> {{review.text}}</p>

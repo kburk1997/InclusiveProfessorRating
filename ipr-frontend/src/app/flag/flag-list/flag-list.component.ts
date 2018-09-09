@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-flag-list',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flag-list.component.css']
 })
 export class FlagListComponent implements OnInit {
-
+  @Input() flags: number[];
   constructor() { }
 
   ngOnInit() {
