@@ -1,3 +1,7 @@
-<p>
-  professor-view works!
-</p>
+<h1>{{professor.name}}</h1>
+<h2>Professor in the {{department.name}} department at <a routerLink="/university/{{university.id}}">{{university.name}}</a></h2>
+<h3>Overall: {{professor.overallRating}}/5 ({{professor.numRatings}} rating(s))</h3>
+
+<div *ngFor="let review of reviews">
+  <app-review [review]="review"></app-review>
+</div>
