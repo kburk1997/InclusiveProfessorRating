@@ -5,7 +5,9 @@ import { Review } from '../review/review';
 import { Flag } from '../flag/flag';
 
 export const UNIVERSITIES: University[] = [
-  {id: 0, name: "Rochester Polytechnic Institute", location: "Pennsylvania, RI"}
+  {id: 0, name: "Rochester Polytechnic Institute", location: "Pennsylvania, RI"},
+  {id: 1, name: "Made-Up Institute of Technology", location: "Across the river from Boston, MA"},
+  {id: 2, name: "Rennsaeleayear Institute of Technology", location: "Albany, right?"}
 ];
 
 export const DEPARTMENTS: Department[] = [

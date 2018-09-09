@@ -1,7 +1,14 @@
+<hr>
+<div class="row">
+  <div class="col-sm-4">
 <p><b>Course:</b> {{review.courseTaken}}</p>
-<p><b>Quality:</b> {{review.qualityRating}}/5</p>
-<p><b>Accomodations:</b> {{review.accomRating}}/5</p>
-<p><b>Inclusivity:</b> {{review.inclusiveRating}}/5</p>
-<p><b>Red Flags: </b></p> <app-flag-list [flags]="review.redFlags"></app-flag-list>
-<p><b>Green Flags: </b> <span *ngIf="review.greenFlags.length ==0">None</span> </p> <app-flag-list [flags]="review.greenFlags"></app-flag-list>
-<p><b>Comment: </b> {{review.text}}</p>
+<p><b>Quality:</b> <ngb-rating max="5" readonly="true" [(rate)]="review.qualityRating"></ngb-rating>
+{{review.qualityRating}}/5</p>
+<p><b>Accomodations:</b> <ngb-rating max="5" readonly="true" [(rate)]="review.accomRating"></ngb-rating> {{review.accomRating}}/5</p>
+<p><b>Inclusivity: </b><ngb-rating max="5" readonly="true" [(rate)]="review.inclusiveRating"></ngb-rating> {{review.inclusiveRating}}/5</p></div>
+<div class="col-sm-8">
+<p><b>Red Flags: </b><span *ngIf="review.redFlags.length ==0">None</span>  <app-flag-list [flags]="review.redFlags"></app-flag-list></p>
+<p><b>Green Flags: </b> <span *ngIf="review.greenFlags.length ==0">None</span>  <app-flag-list [flags]="review.greenFlags"></app-flag-list></p>
+<blockquote class="blockquote"> <p><b>Comment: </b> {{review.text}}</p></blockquote>
+</div>
+</div>

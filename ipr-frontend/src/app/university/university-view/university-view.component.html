@@ -1,5 +1,6 @@
 
-<h1>{{university.name}}</h1>
-<h2>{{university.location}}</h2>
+<div style="text-align: center"><h1 class="display-4">{{university.name}}</h1>
+<h2><i class="fas fa-map-marker-alt"></i> {{university.location}}</h2>
+</div>
 
 <app-professor-list [universityId]="university.id"></app-professor-list>

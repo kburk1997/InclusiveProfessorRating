@@ -34,6 +34,8 @@ export class FakeDatabaseService {
   getFlag(id: number): Observable<Flag>{
     return of(FLAGS.find(univ => univ.id === id));
   }
-
+  getUniversities(): Observable<University[]>{
+    return of(UNIVERSITIES);
+  }
 
 }

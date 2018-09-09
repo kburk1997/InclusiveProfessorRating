@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../../services/database.service';
+import { University } from '../../university/university';
 
 @Component({
   selector: 'app-welcome-page',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomePageComponent implements OnInit {
 
-  constructor() { }
+  universities: University[];
+  constructor(private dbService: DatabaseService) { }
 
   ngOnInit() {
+    this.dbService.getUniversities().subscribe(unis=> this.universities = unis);
   }
 
 }

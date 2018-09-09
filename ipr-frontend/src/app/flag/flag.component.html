@@ -1,1 +1,2 @@
-<p>{{flag.name}}</p>
+<span class="badge badge-danger" *ngIf="flag.red">{{flag.name}}</span>
+<span class="badge badge-success" *ngIf="!flag.red">{{flag.name}}</span>

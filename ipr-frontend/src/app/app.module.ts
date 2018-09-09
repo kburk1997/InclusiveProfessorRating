@@ -31,7 +31,7 @@ import { FakeDatabaseService } from './services/fake-database.service';
   ],
   imports: [
     BrowserModule,
-    NgbModule,
+    NgbModule.forRoot(),
     AppRoutingModule
   ],
   providers: [{provide: DatabaseService,

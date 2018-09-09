@@ -1,12 +1,14 @@
 <h3>All professors</h3>
 
-<table>
+<table class="table">
+  <thead>
   <tr>
     <th>Name</th>
     <th>Department</th>
     <th>Overall Rating</th>
     <th>Number of Ratings</th>
   </tr>
+</thead>
   <tr *ngFor="let professor of professors">
     <td><a routerLink="/professor/{{professor.id}}">{{professor.name}}</a></td>
     <td>{{deptNames[professor.id]}}</td>
